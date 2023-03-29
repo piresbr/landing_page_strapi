@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_section_title_and_descriptions",
+  "info": {
+    "displayName": "section-title-and-description"
+  },
+  "options": {},
+  "attributes": {
+    "title_and_description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.title-and-description",
+      "required": true
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.configuracoes-da-secao",
+      "required": true
+    }
+  }
+}

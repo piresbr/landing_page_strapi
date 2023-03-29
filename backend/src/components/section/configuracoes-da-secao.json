@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_configuracoes_da_secaos",
+  "info": {
+    "displayName": "settings-section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "section_id": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-zA-Z]+([0-9-]*[a-zA-Z]+[0-9-]*[a-zA-Z]+[0-9-]*[a-zA-Z]+)$"
+    },
+    "background": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

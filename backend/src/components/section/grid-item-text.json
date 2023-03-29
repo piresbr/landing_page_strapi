@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_grid_item_texts",
+  "info": {
+    "displayName": "grid-item-text"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    }
+  }
+}
