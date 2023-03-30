@@ -1,17 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'styled-components';
+import * as Styled from './styles';
 
-import { GlobalStyles } from '../../styles/global-styles';
-import { theme } from '../../styles/theme';
-import Home from '../../components/Home'
+function Home() {
+  return (
+    <div className="App">
+      <Styled.Wrapper>
+        <h1>Hello</h1>
+      </Styled.Wrapper>
+    </div>
+  );
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <Home />
-      <GlobalStyles />
-    </ThemeProvider>
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
+export default Home;
