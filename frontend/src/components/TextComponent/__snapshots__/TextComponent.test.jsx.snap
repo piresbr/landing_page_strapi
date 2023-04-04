@@ -1,0 +1,13 @@
+// Vitest Snapshot v1
+
+exports[`<TextComponent /> > match snapshot 1`] = `
+.c0 {
+  font-size: 1.5rem;
+}
+
+<p
+  class="c0"
+>
+  Children
+</p>
+`;
