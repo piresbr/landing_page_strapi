@@ -7,6 +7,10 @@ export default {
   component: Heading,
   args: {
     title: 'Teste',
+    as: 'h2',
+    size: 'md',
+    spacing: 'md',
+    uppercase: false,
   },
   argTypes: {
     title: { type: 'string' },
@@ -28,9 +32,11 @@ Light.parameters = {
 };
 Light.args = {
   themeDark: false,
+  uppercase: false,
 };
 
 //caso o light esteja true, ele força para voltar o dark com os args abaixo
 Dark.args = {
   themeDark: true,
+  uppercase: false,
 };

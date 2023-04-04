@@ -9,15 +9,26 @@ export const theme = {
     secondary: '#dc143c'
   },
   fonts: {
-    small: "0.5rem",
-    default: "1rem",
-    big: "2rem",
-    bigger: "3rem",
+    sizes: {
+      sm: '1rem',
+      md: '1.5rem',
+      lg: '2rem',
+      xl: '3rem',
+      xxl: '4rem',
+    }
   },
   spacings: {
     sm: '1rem',
     md: '1.5rem',
-    xl: '2rem',
+    lg: '2rem',
+    xl: '3rem',
     xxl: '4rem',
   },
+  mediaQuery: {
+    sm: '(max-width: 320px)',
+    md: '(min-width: 321px) and (max-width: 767px)',
+    lg: '(min-width: 768px) and (max-width: 1279px)',
+    xl: '(min-width: 1280px) and (max-width: 1400px)',
+    xl: '(min-width: 1401px)',
+  }
 };
