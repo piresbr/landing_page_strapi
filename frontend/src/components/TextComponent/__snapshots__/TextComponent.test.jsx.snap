@@ -2,7 +2,7 @@
 
 exports[`<TextComponent /> > match snapshot 1`] = `
 .c0 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 <p

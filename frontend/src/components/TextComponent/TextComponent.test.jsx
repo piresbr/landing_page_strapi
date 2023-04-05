@@ -12,10 +12,10 @@ describe('<TextComponent />', () => {
   it('match snapshot', async () => {
     const { container } = renderTheme(<TextComponent>Children</TextComponent>);
 
-    // expect(container.firstChild).toMatchSnapshot(); //gena a pasta e arquivo de snapshot
+    expect(container.firstChild).toMatchSnapshot(); //gena a pasta e arquivo de snapshot
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
 
       <p

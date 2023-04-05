@@ -13,6 +13,7 @@ export const Heading = ({
 }) => {
   return (
     <Styled.Title
+      title={title}
       themeDark={themeDark}
       as={as}
       fontSize={fontSize}
