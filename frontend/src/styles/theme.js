@@ -6,9 +6,14 @@ export const theme = {
     dark: '#0a1128',
     light: '#fff',
     primary: '#dedede',
-    secondary: '#dc143c'
+    secondary: '#dc143c',
+    mediumGray: '#DDDDDD',
   },
   fonts: {
+    family: {
+      default: "'Open Sans', sans-serif",
+      secondary: "'Montserrat', sans-serif",
+    },
     sizes: {
       sm: '1rem',
       md: '1.5rem',
