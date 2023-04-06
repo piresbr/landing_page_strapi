@@ -10,6 +10,6 @@ export const Container = styled.div`
 
 export const Html = styled.div`
   ${({ theme }) => css`
-    margin: ${theme.spacings.xxl} 0;
+    margin: ${theme.spacings.xhuge} 0;
   `}
 `;

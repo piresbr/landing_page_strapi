@@ -1,259 +1,70 @@
-# Creating a boilerplate for React 18 in ViteJS
+# Getting Started with Create React App
 
-## Editorconfig
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-If your are using editorconfig, this is my config:
+## Available Scripts
 
-```
-# EditorConfig is awesome: https://EditorConfig.org
+In the project directory, you can run:
 
-# top-most EditorConfig file
-root = true
+### `npm start`
 
-[*]
-indent_style = space
-indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## For ESLint and Prettier
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
-npm i eslint @babel/eslint-parser @babel/preset-env @babel/preset-react prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-storybook -D
-```
+### `npm test`
 
-Create the files `.eslintrc.js`, `.prettierrc.js` and a file called
-`babel.config.js`.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-.eslintrc.js
+### `npm run build`
 
-```javascript
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    jest: true,
-    node: true,
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended',
-    'plugin:storybook/recommended',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  plugins: ['react', 'prettier', 'react-hooks'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-  },
-};
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-.prettierrc.js
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```javascript
-module.exports = {
-  arrowParens: 'always',
-  bracketSpacing: true,
-  endOfLine: 'lf',
-  htmlWhitespaceSensitivity: 'ignore',
-  insertPragma: false,
-  jsxSingleQuote: false,
-  printWidth: 80,
-  proseWrap: 'always',
-  quoteProps: 'as-needed',
-  requirePragma: false,
-  semi: true,
-  singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'all',
-  useTabs: false,
-  vueIndentScriptAndStyle: false,
-  embeddedLanguageFormatting: 'off',
-};
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-babel.config.js
+### `npm run eject`
 
-```javascript
-module.exports = {
-  presets: [
-    '@babel/preset-env',
-    ['@babel/preset-react', { runtime: 'automatic' }],
-  ],
-};
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Prop-types?
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-If your are using proptypes, install it:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```
-npm i prop-types
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-And use:
+## Learn More
 
-## Testing
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-For tests, we're going to use `vitest` and `testing-library`.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### For vitest
+### Code Splitting
 
-```
-npm i -D vitest jsdom @testing-library/react @testing-library/jest-dom
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Now, in your vite.config.js:
+### Analyzing the Bundle Size
 
-```javascript
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  root: 'src',
-  build: {
-    outDir: '../dist',
-  },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['../.test/setup.js'],
-    include: ['**/*(*.)?{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: ['node_modules', 'dist', '.idea', '.git', '.cache'],
-  },
-});
-```
+### Making a Progressive Web App
 
-For the file in `/.test/setup.js`, use:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-```javascript
-import '@testing-library/jest-dom';
-import 'jest-styled-components';
-```
+### Advanced Configuration
 
-Ps.: I added `jest-styled-components` to make it easy for me. I am going to use
-Styled-Components. If your aren't, please comment that line out.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### For Styled Components
+### Deployment
 
-```
-npm i styled-components
-npm i -D jest-styled-components @types/styled-components
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Create a folder called styles in `src`. Add the files `render-theme.jsx`,
-`global-styles.jsx`, `theme.js` and a `styled-theme-provider.jsx`.
+### `npm run build` fails to minify
 
-The file `theme.js` is where you should add the theme for your application, for
-example (the most simple and ugly theme you would ever see):
-
-```javascript
-export const theme = {
-  colors: {
-    primary: 'red',
-    secondary: 'blue',
-  },
-};
-```
-
-The `global-styles.jsx` is where we add the global theme for our application.
-Here we can add fonts, provide css reset and more.
-
-```javascript
-import { createGlobalStyle } from 'styled-components';
-
-export const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    font-size: 62.5%;
-  }
-
-  body {
-    font-size: 1.6rem;
-  }
-`;
-```
-
-The `styled-theme-provider.jsx` makes things easier by providing the theme to
-other components.
-
-```javascript
-import { ThemeProvider } from 'styled-components';
-import Proptypes from 'prop-types';
-import { GlobalStyles } from './global-styles';
-import { theme } from './theme';
-
-export const StyledThemeProvider = ({ children }) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      {children}
-    </ThemeProvider>
-  );
-};
-
-StyledThemeProvider.propTypes = {
-  children: Proptypes.node.isRequired,
-};
-```
-
-The file `render-theme.jsx` is going to be used for tests. It will provide the
-`StyledThemeProvider` so we can use styled-components in our tests.
-
-This is the most basic version of the `renderTheme` function.
-
-```javascript
-import { render } from '@testing-library/react';
-import { StyledThemeProvider } from './styled-theme-provider';
-
-export const renderTheme = (children) => {
-  return render(<StyledThemeProvider>{children}</StyledThemeProvider>);
-};
-```
-
-And on the `main.jsx`, you may want to wrap everything using
-`StyledThemeProvider`.
-
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { StyledThemeProvider } from './styles/styled-theme-provider';
-import App from './App';
-import './index.css';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <StyledThemeProvider>
-      <App />
-    </StyledThemeProvider>
-  </React.StrictMode>,
-);
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

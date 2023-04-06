@@ -29,7 +29,7 @@ export const Container = styled.div`
       margin-bottom: 0;
     }
 
-    @media ${theme.mediaQuery.md} {
+    @media ${theme.media.lteMedium} {
       height: 100vh;
       visibility: hidden;
       opacity: 0;
@@ -45,7 +45,7 @@ export const Container = styled.div`
       }
 
       & ${Heading} {
-        padding-bottom: ${theme.spacings.lg};
+        padding-bottom: ${theme.spacings.large};
         display: flex;
         justify-content: center;
       }
@@ -59,10 +59,10 @@ export const MenuContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media ${theme.mediaQuery.md} {
+    @media ${theme.media.lteMedium} {
       display: block;
       text-align: center;
-      padding: ${theme.spacings.xxl} 0;
+      padding: ${theme.spacings.xxlarge} 0;
     }
   `}
 `;
@@ -75,13 +75,13 @@ export const Button = styled.button`
     right: 2rem;
     width: 4rem;
     height: 4rem;
-    background: ${theme.colors.primary};
+    background: ${theme.colors.primaryColor};
     color: ${theme.colors.white};
     border: none;
     display: none;
     pointer-events: ${visible ? 'none' : 'all'};
 
-    @media ${theme.mediaQuery.md} {
+    @media ${theme.media.lteMedium} {
       display: flex;
       align-items: center;
       justify-content: center;

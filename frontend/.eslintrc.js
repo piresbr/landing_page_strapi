@@ -3,29 +3,21 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
-    node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
-    'plugin:storybook/recommended',
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  "parser": "@babel/eslint-parser",
-  requireConfigFile: false,
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
+    ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'react-hooks'],
+  plugins: ['react'],
   settings: {
     react: {
       version: 'detect',
@@ -33,5 +25,6 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'off',
   },
 };

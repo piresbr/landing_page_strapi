@@ -13,7 +13,7 @@ export const Container = styled.footer`
     }
 
     & ${TextComponent} {
-      font-size: ${theme.fonts.sizes.sm};
+      font-size: ${theme.font.sizes.small};
     }
 
     & ${SectionContainer} {

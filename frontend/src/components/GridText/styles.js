@@ -5,7 +5,7 @@ import { Container as TextComponent } from '../TextComponent/styles';
 export const Container = styled.div`
   ${({ theme }) => css`
     ${TextComponent} {
-      margin-bottom: ${theme.spacings.xxl};
+      margin-bottom: ${theme.spacings.xhuge};
     }
   `}
 `;
@@ -19,7 +19,7 @@ export const Grid = styled.div`
     overflow: hidden;
     width: 100%;
 
-    @media ${theme.mediaQuery.md} {
+    @media ${theme.media.lteMedium} {
       grid-template-columns: 1fr;
     }
   `}

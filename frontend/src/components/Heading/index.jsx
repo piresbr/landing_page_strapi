@@ -1,35 +1,29 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-//title é puxado do stories.js, declarado dentro do default. Depois ele pega esse componente e exporta
-// como Heading para ser usado no index geral do app.
 export const Heading = ({
-  title = 'Teste',
-  themeDark = false,
-  as = 'h2',
-  fontSize = 'lg',
-  spacing = 'md',
+  children,
+  colorDark = true,
+  as = 'h1',
+  size = 'huge',
   uppercase = false,
 }) => {
   return (
     <Styled.Title
-      title={title}
-      themeDark={themeDark}
+      colorDark={colorDark}
       as={as}
-      fontSize={fontSize}
-      spacing={spacing}
+      size={size}
       uppercase={uppercase}
     >
-      {title}
+      {children}
     </Styled.Title>
   );
 };
 
 Heading.propTypes = {
-  title: P.node,
-  themeDark: P.bool,
+  children: P.node.isRequired,
+  colorDark: P.bool,
   as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  fontSize: P.oneOf(['sm', 'md', 'lg', 'xl', 'xxl']),
-  spacing: P.oneOf(['sm', 'md', 'lg', 'xl', 'xxl']),
+  size: P.oneOf(['small', 'medium', 'big', 'huge']),
   uppercase: P.bool,
 };
