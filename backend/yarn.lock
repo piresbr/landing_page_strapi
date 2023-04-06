@@ -8885,6 +8885,11 @@
   "resolved" "https://registry.npmjs.org/std-env/-/std-env-3.3.2.tgz"
   "version" "3.3.2"
 
+"strapi-plugin-populate-deep@^2.0.0":
+  "integrity" "sha512-IsdXZPjRiOnaczoQaXI6xfxnFqUhR70uW1VCRbY4a3hEmmocpCpIUGx7TiHdNPJOZuDiueTgEIQ4V5XEru9Lvw=="
+  "resolved" "https://registry.npmjs.org/strapi-plugin-populate-deep/-/strapi-plugin-populate-deep-2.0.0.tgz"
+  "version" "2.0.0"
+
 "stream-chain@^2.2.5", "stream-chain@2.2.5":
   "integrity" "sha512-1TJmBx6aSWqZ4tx7aTpBDXK0/e2hhcNSTV8+CbFJtDjbb+I1mZ8lHit0Grw9GRT+6JbIrrDd8esncgBi8aBXGA=="
   "resolved" "https://registry.npmjs.org/stream-chain/-/stream-chain-2.2.5.tgz"

@@ -1,34 +1,33 @@
 {
   "collectionName": "components_section_section_two_columns",
   "info": {
-    "displayName": "section-two-columns",
-    "description": ""
+    "displayName": "section_two_columns",
+    "icon": "address-book"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
       "required": true,
-      "minLength": 2,
-      "default": "Título do bloco"
+      "maxLength": 255,
+      "minLength": 3
     },
     "description": {
       "type": "text",
-      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum massa turpis, in pharetra mi laoreet quis. Curabitur iaculis pellentesque justo id tincidunt. In hac habitasse platea dictumst",
-      "required": false
+      "required": true
     },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     },
     "metadata": {
       "type": "component",
       "repeatable": false,
-      "component": "section.configuracoes-da-secao",
+      "component": "section.section-metadata",
       "required": true
     }
   }
