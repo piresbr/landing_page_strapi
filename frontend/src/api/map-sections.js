@@ -96,19 +96,22 @@ export const mapImageGrid = (section = {}) => {
     image_grid: grid = [],
   } = section;
 
+  // const srcImg =
+  // section && section.image.data.attributes
+  //   ? section.image.data.attributes.url
+  //   : '';
+  const newGrid = section.image_grid;
+
   return {
     component: 'section.section-grid-image',
     title,
     background,
     sectionId,
     description,
-    grid: grid.map((img) => {
-      const {
-        image: { url: srcImg = '', alternativeText: altText = '' } = '',
-      } = img;
+    grid: newGrid.map((img) => {
+      const srcImg = img.image.data[0].attributes.url;
       return {
         srcImg,
-        altText,
       };
     }),
   };

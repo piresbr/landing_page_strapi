@@ -31,6 +31,10 @@ export const GridElement = styled.div`
 export const Image = styled.img`
   ${({ theme }) => css`
     width: 100%;
+    height: 100%;
+    min-height: 310px;
+    object-fit: cover;
+    border-radius: 5px;
     transition: all 300ms ease-in-out;
 
     &:hover {

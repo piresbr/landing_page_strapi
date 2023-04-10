@@ -26,14 +26,13 @@ function Home() {
 
       try {
         const data = await fetch(
-          `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate=deep,20`,
+          `http://localhost:1337/api/pages/?filters[slug]=${slug}&populate=deep,50`,
         );
         const json = await data.json();
         const { attributes } = json.data[0];
         //passa do mapsections para o mapdata e depois atribui aqui
         const pageData = mapData([attributes]);
         setData(() => pageData[0]);
-        console.log(pageData[0]);
       } catch {
         setData(undefined);
       }
@@ -62,7 +61,7 @@ function Home() {
     }
   }, [data]);
 
-  if (data === undefined) {
+  if (data === undefined || data.lenght === 0) {
     return <PageNotFound />;
   }
 
@@ -84,7 +83,7 @@ function Home() {
         const { component } = section;
         const key = `${slug}-${index}`;
 
-        console.log(section);
+        // console.log(section);
         if (component === 'section.section-two-columns') {
           return <GridTwoColumns key={key} {...section} />;
         }
