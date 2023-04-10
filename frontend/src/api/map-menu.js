@@ -6,9 +6,10 @@ export const mapMenu = (menu = {}) => {
     links: links = [],
   } = menu;
 
-  // console.log(menu);
+  const srcImg =
+    menu.logo && menu.logo.data.attributes ? menu.logo.data.attributes.url : '';
 
-  const srcImg = menu.logo && menu.logo.url ? menu.logo.url : '';
+  // console.log(menu.logo.data.attributes.url);
 
   return {
     newTab,

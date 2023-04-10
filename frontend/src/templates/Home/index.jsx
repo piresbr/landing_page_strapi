@@ -30,8 +30,10 @@ function Home() {
         );
         const json = await data.json();
         const { attributes } = json.data[0];
+        //passa do mapsections para o mapdata e depois atribui aqui
         const pageData = mapData([attributes]);
         setData(() => pageData[0]);
+        console.log(pageData[0]);
       } catch {
         setData(undefined);
       }
@@ -82,6 +84,7 @@ function Home() {
         const { component } = section;
         const key = `${slug}-${index}`;
 
+        console.log(section);
         if (component === 'section.section-two-columns') {
           return <GridTwoColumns key={key} {...section} />;
         }
